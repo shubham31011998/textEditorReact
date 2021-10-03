@@ -1,25 +1,21 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import  NavbarMain  from './Components/Navbar/Navbar';
+import { Container } from 'react-bootstrap';
+import TextForm from './Components/TextForm/TextForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+
+const App = (props) => (
+  <div>
+    <NavbarMain />
+    <Container>
+      <div className="py-5">
+        <TextForm heading="Add Your Text To Edit"/>
+      </div>
+    </Container>
+  </div>
+);
 
 export default App;
